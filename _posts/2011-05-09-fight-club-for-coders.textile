@@ -3,15 +3,13 @@ layout: post
 title: Fight Club for Coders
 ---
 
-<h2>{{ page.title }}</h2>
+<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
 
 {{ page.date | date: "%b %d, %Y" }}
 
-My project management lecturer had a habit of telling stories from "when I was a project manager". Bet you can tell they were riveting. One of said stories described the infamous LASCAD (London Ambulance Service Computer Aided Dispatch) clusterfuck of 1992 in which the LAS decided to upgrade their ambulance routing and dispatch system to be automated instead of pen and paper. For those of you who don't know, the new system was the ultimate definition of fail. As in, people died. Heavy stuff.
+<p><img src="/images/funny-cat-engineer.jpg" />My project management lecturer had a habit of telling stories from "when I was a project manager". Bet you can tell they were riveting. One of said stories described the infamous LASCAD (London Ambulance Service Computer Aided Dispatch) clusterfuck of 1992 in which the LAS decided to upgrade their ambulance routing and dispatch system to be automated instead of pen and paper. For those of you who don't know, the new system was the ultimate definition of fail. As in, people died. Heavy stuff.
 
-<img src="../images/funny-cat-engineer.jpg" />
-
-But that's the thing about mission-critical systems. Your N^2 loops that are leaking memory all over the shop aren't just going to bring down production, they're going to kill people. Software houses that develop these kind of systems all the time take QA and load testing more seriously than having a normal life, but since LAS decided to be a cheapskate and go for the McValue meal, the project landed in the incompetent hands of a firm that had never written a system so large before. Evidently, they had also never heard of SVT.
+But that's the thing about mission-critical systems. Your N^2 loops that are leaking memory all over the shop aren't just going to bring down production, they're going to kill people. Software houses that develop these kind of systems all the time take QA and load testing more seriously than having a normal life, but since LAS decided to be a cheapskate and go for the McValue meal, the project landed in the incompetent hands of a firm that had never written a system so large before. Evidently, they had also never heard of SVT.</p>
 
 Like most developers wanting to keep their bum in a seat and out of the welfare line, I take the quality of my code pretty seriously. I write tests, do code reviews, etc. Admittedly one of the benefits of working for a bank is that there's so many floodgates your code passes through before it even sniffs production, that even if you did forget to close that Hibernate connection, chances are it will get picked up somewhere between Cobertura and an overly zealous sysadmin. That said, in the legacy systems I've worked with I've sometimes stumbled across code so heinous it made me think the people who wrote it must have not cared at all about their career, or, more importantly, the future developers who would have to extend their pile of vomit. It's like pissing on the virtual floor. No one likes cleaning that up. It's easier to nuke the beast and start over. And probably cheaper. Problem is, big corporations are risk-averse towards technology. They would rather go for band-aids than real fixes simply to mitigate risk. But the reality is band-aids fall off. Maybe not this year, nor for the next 5-10 years, but one day they will fall off or impede some new development initiative that will require a thorough fix of the original problem anyway. 
 

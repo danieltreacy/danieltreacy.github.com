@@ -3,7 +3,7 @@ layout: post
 titl: A malleable consumer
 ---
 
-<h2>{{ page.title }}</h2>
+<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
 
 {{ page.date | date: "%b %d, %Y" }}
 

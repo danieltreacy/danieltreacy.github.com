@@ -13,9 +13,12 @@
   </head>
   
   <body>
-    {% include header.html %}    
-    <div id="container">
-      {{ content }}
+    <div class="wrapper">
+      {% include header.html %}    
+      <div id="container">
+        {{ content }}
+        <div class="push"></div>
+      </div>
     </div>
     {% include footer.html %}
   </body>

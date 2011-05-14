@@ -3,7 +3,7 @@ html, body {
 
 body {
   background: #dcd9d2;
-  font-family: "Droid Serif", arial, serif;
+  font-family: Georgia, serif;
   font-size: 14px;
   color: black;
   text-shadow: white 0 1px 0;
@@ -11,35 +11,28 @@ body {
 
 #top {
   width: 100%;
-  height: 70px;
-  margin-bottom: 20px;
-  background: black;
-  position: relative; }
+  height: 90px;
+  position: relative;
+  border-top: 10px solid #738190; }
   #top header {
     width: 900px;
     margin: 0 auto;
     font-family: "Just Me Again Down Here", serif;
-    text-shadow: none;
     font-weight: normal; }
-    #top header nav {
-      float: right;
-      font-family: "Droid Serif", serif;
-      margin: 25px 0 0 0; }
     #top header a {
-      margin: 0 0 0 25px; }
+      margin: 0; }
     #top header a:link, #top header a:visited, #top header a:active {
-      color: white;
-      text-decoration: none;
-      display: inline-block; }
+      color: black;
+      text-decoration: none; }
     #top header a:hover {
-      color: #d2d8dc; }
+      color: #2f5471; }
     #top header h1 {
-      margin: 0;
+      margin: 40px 0;
       float: left;
-      font-family: "Just Me Again Down Here", serif;
-      font-size: 60px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 40px;
       padding: 0;
-      font-weight: normal; }
+      font-weight: black; }
       #top header h1 a {
         margin: 0; }
 
@@ -55,24 +48,32 @@ body {
   #container .push {
     height: 60px;
     clear: both; }
+  #container a {
+    margin: 0; }
   #container a:link, #container a:visited, #container a:active {
     color: black;
     text-decoration: none; }
   #container a:hover {
     color: #2f5471; }
+  #container h2, #container h3 {
+    font-family: Helvetica, Arial, serif;
+    font-weight: bold;
+    width: 100%;
+    padding: 0;
+    margin: 20px 0;
+    clear: both; }
   #container h2 {
-    font-family: "Droid Serif", serif;
-    font-weight: normal;
-    font-size: 18px;
-    float: left;
-    width: 100%; }
+    font-size: 20px; }
+  #container h3 {
+    font-size: 16px; }
   #container #article {
     float: left; }
     #container #article img {
       float: right;
       margin-left: 15px; }
     #container #article p {
-      float: left; }
+      float: left;
+      line-height: 150%; }
   #container #article.front {
     width: 600px; }
   #container #article.post {
@@ -88,14 +89,17 @@ body {
         list-style: none;
         margin: 0 0 5px; }
   #container blockquote {
+    width: 100%;
+    clear: both;
     font-style: italic;
     font-size: 16px; }
   #container cite {
-    margin-left: 400px; }
+    margin-left: 400px;
+    width: 100%;
+    clear: both; }
 
 .line {
   width: 100%;
-  border-top: 1px solid #6a6150;
   float: left;
   margin: 20px 0; }
 
@@ -108,12 +112,10 @@ body {
   #bottom footer {
     width: 900px;
     margin: 0 auto;
-    font-family: "Droid Serif", serif;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
     color: white;
     text-shadow: none; }
-    #bottom footer .top {
-      float: right;
-      cursor: pointer; }
     #bottom footer a {
       margin: 0 0 0 25px; }
     #bottom footer a:link, #bottom footer a:visited, #bottom footer a:active {
@@ -122,3 +124,6 @@ body {
       display: inline-block; }
     #bottom footer a:hover {
       color: #d2d8dc; }
+    #bottom footer .top {
+      float: right;
+      cursor: pointer; }

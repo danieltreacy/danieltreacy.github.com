@@ -7,6 +7,6 @@ title: New Home
 
 {{ page.date | date: "%b %d, %Y" }}
 
-<p><a href="http://xkcd.com/149/" target="_blank"><img src="/images/sandwich.jpg" /></a>Well that was quick. After getting frustrated with Squarespace's airtight control over simple things like, oh I don't know, editing the HTML of your pages, I decided to bail. So I decided to write it myself using <a href="http://www.github.com/mojombo/jekyll" target="_blank">Jekyll</a>, and is running on my VPS (hosted by the good people at <a href="http://www.slicehost.com/" target="_blank" />Slicehost</a>).
+<p>Well that was quick. I decided to bail on Squarespace, and code my blog manually, for the control, and also because I was frustrated at the lack of themes and couldn't be bothered to customize the CSS. It's much easier to write it up myself from scratch than sift through someone else's code. I threw this blog together using <a href="http://www.github.com/mojombo/jekyll" target="_blank">Jekyll</a>, and is running on my VPS (hosted by the good people at <a href="http://www.slicehost.com/" target="_blank" />Slicehost</a>).
   
-The blog is pretty basic right now, but I'm hoping to make it prettier over time. </p>
+The blog is pretty basic right now, but I'm hoping to make it prettier over time.

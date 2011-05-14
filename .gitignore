@@ -4,3 +4,4 @@ _site/
 stylesheets/.sass-cache/*
 concepts/
 .sass-cache/*
+deploy.sh

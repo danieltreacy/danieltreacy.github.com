@@ -3,10 +3,6 @@ layout: post
 title: New Home
 ---
 
-<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-
-{{ page.date | date: "%b %d, %Y" }}
-
-<p>Well that was quick. I decided to bail on Squarespace, and code my blog manually, for the control, and also because I was frustrated at the lack of themes and couldn't be bothered to customize the CSS. It's much easier to write it up myself from scratch than sift through someone else's code. I threw this blog together using <a href="http://www.github.com/mojombo/jekyll" target="_blank">Jekyll</a>, and is running on my VPS (hosted by the good people at <a href="http://www.slicehost.com/" target="_blank" />Slicehost</a>).
+Well that was quick. I decided to bail on Squarespace, and code my blog manually, for the control, and also because I was frustrated at the lack of themes and couldn't be bothered to customize the CSS. It's much easier to write it up myself from scratch than sift through someone else's code. I threw this blog together using <a href="http://www.github.com/mojombo/jekyll" target="_blank">Jekyll</a>, and is running on my VPS (hosted by the good people at <a href="http://www.slicehost.com/" target="_blank" />Slicehost</a>).
   
 The blog is pretty basic right now, but I'm hoping to make it prettier over time.

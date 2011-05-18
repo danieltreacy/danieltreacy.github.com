@@ -4,7 +4,9 @@ layout: default
 <div id="article" class="post">  
   <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
 
-  {{ page.date | date: "%b %d, %Y" }}
+  <h3>{{ page.date | date: "%b %d, %Y" }}</h3>
   
   {{ content }}
+  
+  <div class="spacer"></div>
 </div>

@@ -2,7 +2,7 @@
 
 // jquery listeners
 
-$(document).ready(function() { 
+$(document).ready(function() {
 
 	$('.top').click(function() { 
 		goTopOfPage();

@@ -5,3 +5,4 @@ stylesheets/.sass-cache/*
 concepts/
 .sass-cache/*
 deploy.sh
+lastfm_api_key.rtf

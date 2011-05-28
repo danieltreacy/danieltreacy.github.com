@@ -1,3 +1,63 @@
+<script type="text/javascript">
+  $(document).ready(function() { 
+    
+    var api_key = "78eb730118d4ad422b019ad1a6440852";
+    
+    var directive = {
+      'li': {
+        'track <- context': {
+          'span.track': 'track.name',
+          'span.artist': function(arg) {
+            return get_value(arg.item.artist);
+          },
+          'span.date': function(arg) {
+            return get_value(arg.item.date);
+          },
+          'span.topartist@style': function(arg) {
+            return "display: none"
+          }
+        }
+      }
+    };
+    
+    // need to access some vars this way because for some fucked up reason last.fm 
+    // decided to put a leading '#' sign on the variable which javascript cannot parse
+    // as valid json
+    var get_value = function(item) {
+      for (var k in item) {
+        return item[k];
+        break;
+      }
+    }
+    
+    // last fm api call
+    
+    // get top tracks
+    $.ajax({
+      url: "http://ws.audioscrobbler.com/2.0/",
+      dataType: "jsonp", // must be jsonp to support cross-domain ajax calls
+      data: { method: "user.getrecenttracks",
+        user: "danielttreacy",
+        api_key: api_key,
+        format: "json",
+        limit: "5" },
+      beforeSend: function() {
+        $('#loading').html("Loading tracks...");
+      },
+      success: function(tracks) {
+        // clear loading message    
+        $('#loading').html("");
+        // render using PURE
+        $('ul#recenttracks').render(tracks.recenttracks.track, directive);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        $('#loading').html("Error getting tracks from Last.fm");
+      }
+    });
+        
+  });
+</script>
+
 <div id="sidebar">
 
   <h2>About</h2>
@@ -14,6 +74,16 @@
     <li><a href="http://www.last.fm/user/danielttreacy" target="_blank">Last.fm</a></li>
     <li><a href="http://forrst.com/people/danieltreacy" target="_blank">Forrst</a></li>
     <li><a href="http://www.quora.com/Daniel-Treacy" target="_blank">Quora</a></li>
+  </ul>
+  
+  <h2>Recent tracks</h2>
+  <span id="loading"></span>
+  <ul id="recenttracks">
+    <li>
+      <span class="track"></span><br />
+      <span class="artist"></span><span class="topartist"></span><br />
+      <span class="date"></span>
+    </li>
   </ul>
   
   <h2>Archives</h2>

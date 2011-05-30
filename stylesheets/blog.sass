@@ -72,10 +72,6 @@ body
 	
 	#article
 		float: left
-		
-		img
-			float: right
-			margin-left: 15px
 			
 		p
 			float: left
@@ -91,14 +87,7 @@ body
 		width: 250px
 		margin: 0 0 0 50px
 		float: right
-		
-		ul
-			margin: 0
-			padding: 0
-			
-			li
-				list-style: none
-				margin: 0 0 5px
+		@include list-reset
 		
 	blockquote
 		width: 100%
@@ -136,6 +125,16 @@ body
 	margin-left: 10px
 	font-size: 90%
 	font-weight: bold
+	
+#portfolio
+	@include list-reset
+	
+	ul
+		margin-bottom: 20px
+	
+	ul li img
+		float: left
+		margin: 0 15px
 	
 #bottom
 	width: 100%

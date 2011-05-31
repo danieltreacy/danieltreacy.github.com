@@ -11,7 +11,8 @@
             return get_value(arg.item.artist);
           },
           'span.date': function(arg) {
-            return get_value(arg.item.date);
+            var track_date = get_value(arg.item.date);
+            return track_date == undefined ? "Now" : track_date;
           },
           'span.topartist@style': function(arg) {
             return "display: none"

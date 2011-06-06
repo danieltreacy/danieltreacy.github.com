@@ -14,3 +14,5 @@ So, developers: use your product as early on in development as you can. Even if 
 Does this apply to large companies too? Definitely. If you're in the technology arm of a firm, why not give business stakeholders or the product owner access to the nightly builds and get an internal feedback loop going? Google has been doing this for some time with the release of their Chromium nightly builds and, more recently, Google Canary development builds. I don't know if Googlers outside the Chrome team are using the nightly builds on their desktop, but I daresay they should. Feedback should flow into your product from every possible source.
 
 Maybe every developer worth his or her weight in gold already knows and practices this. I don't know. But I am sure as hell doing this from now on.
+
+*UPDATE* - just to clarify, I don't mean just use it as you test it, I mean use it for pleasure. Use it to fill whatever void you're filling in a user's life. If you don't find it useful, or enjoy using it, your users probably won't either.

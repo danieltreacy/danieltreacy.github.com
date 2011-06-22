@@ -74,8 +74,18 @@ body {
     #container #article p {
       float: left;
       line-height: 150%; }
+      #container #article p a:link, #container #article p a:active, #container #article p a:visited {
+        color: #2f5471; }
+        #container #article p a:link a:link, #container #article p a:link a:active, #container #article p a:link a:visited, #container #article p a:active a:link, #container #article p a:active a:active, #container #article p a:active a:visited, #container #article p a:visited a:link, #container #article p a:visited a:active, #container #article p a:visited a:visited {
+          color: #2f5471; }
+      #container #article p img {
+        float: right;
+        margin: 0 0 20px 20px; }
   #container #article.front {
     width: 600px; }
+    #container #article.front img {
+      float: left;
+      margin: 0 20px 20px 0; }
   #container #article.post {
     width: 900px; }
   #container #sidebar {

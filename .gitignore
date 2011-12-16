@@ -6,3 +6,4 @@ concepts/
 .sass-cache/*
 deploy.sh
 lastfm_api_key.rtf
+.idea/

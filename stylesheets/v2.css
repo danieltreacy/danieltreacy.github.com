@@ -1,5 +1,5 @@
 body {
-  background: #dbdbdb;
+  background: #ffffff;
   font-family: Helvetica Neue, Arial, sans-serif;
   margin-top: 70px;
   -webkit-font-smoothing: antialiased;
@@ -87,11 +87,6 @@ footer {
 
 #content ul li {
   margin: 10px 0;
-  color: #888888;
-}
-
-#content ul li:hover {
-  color: #000000;
 }
 
 .artist {

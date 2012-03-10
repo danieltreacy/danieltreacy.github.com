@@ -69,6 +69,7 @@ footer {
   font-size: 10px;
   font-weight: bold;
   text-transform: uppercase;
+  clear: both
 }
 
 #content h2 a:link, #content h2 a:visited {
@@ -106,6 +107,10 @@ h1 {
   color: #152c38;
 }
 
+h4 {
+    margin: 0;
+}
+
 .inactive {
   color: #b5b5b5;
 }
@@ -125,4 +130,84 @@ h1 {
 .cols div.right {
   width: 160px;
   float: right;
+}
+
+
+
+.desc {
+    float: left;
+    width: 100%;
+    display: block;
+}
+
+.tech {
+    display: inline-block;
+    float: left;
+    background: #000;
+    border-radius: 5px;
+    font-size: 11px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    margin: 3px 2px 0 0;
+}
+
+ul.projects {
+    margin: 0 0 40px;
+    float: left;
+}
+
+ul.projects li {
+    width: 100%;
+    float: left;
+}
+
+ul.projects li img {
+    float: left;
+}
+
+ul.projects.design li {
+    display: inline-block;
+    width: auto;
+}
+
+.java {
+    background: #3285C9
+}
+
+.php {
+    background: #8D62B5
+}
+
+.mysql {
+    background: #EDAD24
+}
+
+.scala {
+    background: #8596AA
+}
+
+.spring {
+    background: #73B535
+}
+
+.nodejs {
+    background: #46483E
+}
+
+.rails {
+    background: #981A21
+}
+
+.objc {
+    background: #666666
+}
+
+.cocoa {
+    background: #999999
+}
+
+.redis {
+    background: #E62222
 }

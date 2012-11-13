@@ -5,6 +5,7 @@
     <meta content="en-us" http-equiv="Content-Language" />
     <link href="/stylesheets/v2.css" media="screen" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/scripts/jquery.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.scrollTo-1.4.3.1-min.js"></script>
     <script type="text/javascript" src="/scripts/page.js"></script>
     <script type="text/javascript" src="/scripts/pure.min.js"></script>
     <title>Daniel Treacy</title>
@@ -15,14 +16,16 @@
 
   <body>
 
-    <div id="container">
+    <div id="scroller-mask"></div>
 
-      {% include header.html %}
-
-      <div id="content">
-        {{ content }}
-      </div>
+    <div id="floating-header">
+      <img id="go-to-top" src="/images/top.png"/>
     </div>
+
+    <div id="container">
+      {{ content }}
+    </div>
+
   </body>
 
 </html>

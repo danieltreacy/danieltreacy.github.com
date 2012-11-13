@@ -1,38 +1,79 @@
 body {
-  background: #3e4754;
-  color: #ffffff;
-  font-family: "chaparral-pro", georgia, serif;
-  margin-top: 70px;
-  -webkit-font-smoothing: antialiased;
+    background: #3e4754;
+    color: #ffffff;
+    font-family: "ff-tisa-web-pro", georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    padding:0;
 }
 
 p {
-    line-height: 150%;
+    line-height: 180%;
 }
 
 #container {
+    position: relative;
+}
+
+#content {
     width: 600px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 header {
     text-align: center;
-    margin: 100px 0;
+    padding: 100px 0 130px;
+    z-index: 10;
+}
+
+#scroller-mask {
+    z-index: 3;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -moz-linear-gradient(top, rgba(62,71,84,1) 0%, rgba(62,71,84,1) 70%, rgba(62,71,84,0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(62,71,84,1)), color-stop(70%,rgba(62,71,84,1)), color-stop(100%,rgba(62,71,84,0)));
+    background: -webkit-linear-gradient(top, rgba(62,71,84,1) 0%,rgba(62,71,84,1) 70%,rgba(62,71,84,0) 100%);
+    background: -o-linear-gradient(top, rgba(62,71,84,1) 0%,rgba(62,71,84,1) 70%,rgba(62,71,84,0) 100%);
+    background: -ms-linear-gradient(top, rgba(62,71,84,1) 0%,rgba(62,71,84,1) 70%,rgba(62,71,84,0) 100%);
+    background: linear-gradient(to bottom, rgba(62,71,84,1) 0%,rgba(62,71,84,1) 70%,rgba(62,71,84,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e4754', endColorstr='#003e4754',GradientType=0 );
+}
+
+
+#floating-header {
+    position: fixed;
+    z-index: 2;
+    left: 50px;
+    top: 50px;
+}
+
+#go-to-top {
+    cursor: pointer;
 }
 
 h2 {
     color: #ffffff;
     margin-bottom: 20px;
+    font-family: "proxima-nova", helvetica, arial, sans-serif;
+    font-weight: 700;
 }
 
 h2 a:link, h2 a:visited, h2 a:active {
     color: #ffffff;
-    font-size: 14pt;
+    font-size: 18pt;
     text-decoration: none;
     border-bottom: 2px solid #dd4825;
 }
 
-.article {
+#article {
+    margin-top: 50px;
+}
+
+.article, #article {
     margin-bottom: 100px;
 }
 
@@ -42,7 +83,11 @@ h2 a:link, h2 a:visited, h2 a:active {
     color: #8da2ac;
 }
 
-a:link {
+a:link, a:visited, a:active {
     color: #8da2ac;
     text-decoration: none;
+}
+
+a:hover {
+    color: #b0c6d0;
 }

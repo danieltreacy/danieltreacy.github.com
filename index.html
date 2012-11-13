@@ -1,117 +1,15 @@
 ---
-layout: front
+layout: default
 title: Blog
 ---
-<script type="text/javascript">
-  $(document).ready(function() { 
-    
-    var api_key = "78eb730118d4ad422b019ad1a6440852";
-    
-    var directive = {
-      'li': {
-        'track <- context': {
-          'span.track': 'track.name',
-          'span.artist': function(arg) {
-            return get_value(arg.item.artist);
-          },
-          'span.topartist@style': function(arg) {
-            return "display: none"
-          }
-        }
-      }
-    };
-    
-    var tweet_directive = {
-      'li': {
-        'tweet <- context': {
-          '.': 'tweet.text'
-        }
-      }
-    }
-    
-    var get_value = function(item) {
-      for (var k in item) {
-        return item[k];
-        break;
-      }
-    }
-    
-    // last fm api call
-    
-    // get top tracks
-    $.ajax({
-      url: "http://ws.audioscrobbler.com/2.0/",
-      dataType: "jsonp", // must be jsonp to support cross-domain ajax calls
-      data: { method: "user.getrecenttracks",
-        user: "danielttreacy",
-        api_key: api_key,
-        format: "json",
-        limit: "8" },
-      beforeSend: function() {
-        $('#loading').html("Loading tracks...");
-      },
-      success: function(tracks) {
-        // clear loading message    
-        $('#loading').html("");
-        // render using PURE
-        $('ul#recenttracks').render(tracks.recenttracks.track, directive);
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        $('#loading').html("Error getting tracks from Last.fm");
-      }
-    });
-    
-    // twitter api call
-    $.ajax({
-      url: 'https://api.twitter.com/1/statuses/user_timeline.json',
-      dataType: 'jsonp',
-      data: {
-        screen_name: 'danieltreacy',
-        count: 5
-      },
-      beforeSend: function() {
-        $('.loading').html("Loading...")
-      },
-      success: function(tweets) {
-        $('.loading').html('');
-        $('ul#recenttweets').render(tweets, tweet_directive);
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        
-      }
-    })
-        
-  });
-</script>
-<h2>Welcome</h2>
-<p>This is the website of Daniel Treacy, a Sydney-based web and mobile developer. It serves as a portfolio of <a href="developer.html">software projects</a>, <a href="musician.html">music compositions</a>, and an <a href="blog.html">occasional blog</a>. You can read <a href="about.html">more about me here</a>.</p>
-<p>Thanks for visiting.</p>
 
-<div class="cols">
-  <div class="left">
-    <h2>Recent tweets</h2>
-    <span class="loading"></span>
-    <ul id="recenttweets">
-      <li></li>
-    </ul>
+{% for post in site.posts limit:5 %}
+  <div class="article">
+
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+    {{ post.content }}
+
+    <span class="article-end">{{ post.date | date: "%b %d, %Y" }}</span>
   </div>
-  <div class="middle">
-    <h2>Recent scrobbles</h2>
-    <span id="loading"></span>
-    <ul id="recenttracks">
-      <li>
-        <span class="track"></span><br />
-        <span class="artist"></span><span class="topartist"></span><br />
-      </li>
-    </ul>
-  </div>
-  <div class="right">
-    <h2>Get in touch</h2>
-    <ul>
-      <li><a href="http://twitter.com/danieltreacy" target="_blank">Twitter</a></li>
-      <li><a href="http://www.github.com/danieltreacy" target="_blank">GitHub</a></li>      
-      <li><a href="http://au.linkedin.com/in/danieltreacy" target="_blank">LinkedIn</a></li>
-      <li><a href="http://www.last.fm/user/danielttreacy" target="_blank">Last.fm</a></li>
-      <li><a href="http://www.rdio.com/#/people/danieltreacy/" target="_blank">Rdio</a></li>
-  </div>
-</div>
+{% endfor %}

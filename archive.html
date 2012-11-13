@@ -1,12 +1,14 @@
 ---
-layout: front
+layout: page
 title: Archive
 ---
 
-<h2>{{ page.title }}</h2>
+<h2><a href="/archive.html">{{ page.title }}</a></h2>
 
-<ul>
+<ul class="archive">
 {% for post in site.posts %}
-    <li><a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: "%b %d, %Y" }}</a></li>
+    <li><a href="{{ post.url }}">{{ post.title }}</a><br />
+  <p class="small">{{ post.date | date: "%b %d, %Y" }}</p>
+  </li>
 {% endfor %}
 </ul>

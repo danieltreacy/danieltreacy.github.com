@@ -158,8 +158,3 @@ hr {
     background-color: #8da2ac;
     margin-top: 50px;
 }
-
-p span {
-    vertical-align: super;
-    font-size: 70%;
-}

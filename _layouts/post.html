@@ -3,7 +3,7 @@ layout: page
 ---
 <div id="article" class="post">
   <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-  <div class="article-end">{{ page.date | date: "%b %d, %Y" }}   &nbsp; <a href="https://twitter.com/intent/tweet?text=Reading%20%22{{post.title}}%22%20by%20%40danieltreacy&url=http://danieltreacy.com{{ post.url }}">
+  <span class="article-end">{{ page.date | date: "%b %d, %Y" }}  &nbsp; <a href="https://twitter.com/intent/tweet?text=Reading%20%22{{page.title}}%22%20by%20%40danieltreacy&url=http://danieltreacy.com{{ page.url }}">
     Share<span class="share">
 <svg width="12" height="11" xmlns="http://www.w3.org/2000/svg">
  <g>
@@ -13,7 +13,7 @@ layout: page
   </g>
  </g>
 </svg>
-    </span></a></div>
+    </span></a></span>
   {{ content }}
 
   <div class="spacer"></div>

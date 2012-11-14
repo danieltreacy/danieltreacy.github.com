@@ -158,3 +158,8 @@ hr {
     background-color: #8da2ac;
     margin-top: 50px;
 }
+
+.footnotes {
+     font-size: 10pt;
+     font-style: italic;
+}

@@ -10,7 +10,18 @@ title: Blog
 
     {{ post.content }}
 
-    <span class="article-end">{{ post.date | date: "%b %d, %Y" }}</span>
+    <span class="article-end">{{ post.date | date: "%b %d, %Y" }}
+  &nbsp; <a href="https://twitter.com/intent/tweet?text=Reading%20%22{{post.title}}%22%20by%20%40danieltreacy&url=http://danieltreacy.com{{ post.url }}">
+    Share<span class="share">
+<svg width="12" height="11" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <g>
+   <path id="svg_2" d="m8.129,4.601c0,0 -2.819,-0.187 -3.902,1.158c0.565,-3.276 3.913,-3.328 3.913,-3.328l-0.006,-2.165l3.592,3.188l-3.597,3.239l0,-2.092z" fill="#8da2ac"/>
+   <path id="svg_3" d="m9,7.998l0,0.002c0,0.55 -0.45,1 -1,1l-5,0c-0.55,0 -1,-0.45 -1,-1l0,-5c0,-0.55 0.45,-1 1,-1l1.449,0c0.521,-0.543 1.222,-0.969 2.176,-1.204l-0.016,-0.796l-2.609,0c-2.2,0 -4,1.8 -4,4l0,3c0,2.2 1.8,4 4,4l3,0c2.2,0 4,-1.8 4,-4l0,-0.525l-2,1.523z" fill="#8da2ac"/>
+  </g>
+ </g>
+</svg>
+    </span></a></span>
   </div>
 {% endfor %}
 

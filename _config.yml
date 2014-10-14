@@ -1,4 +1,1 @@
-auto: true
-server: false
-pygments: false
-lsi: false
+highlighter: null

@@ -1,3 +1,46 @@
-<footer>
-  &copy; 2014 Daniel Treacy
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        {% for path in page_paths %}
+          {% assign my_page = site.pages | where: "path", path | first %}
+          {% if my_page.title %}
+          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>&nbsp;
+          {% endif %}
+        {% endfor %}
+
+        <ul class="social-media-list">
+          <li>
+            <!-- {% if site.author %}
+              {{ site.author | escape }}
+            {% else %}
+              {{ site.title | escape }}
+            {% endif %} -->
+            </li>
+            {% if site.email %}
+            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {% endif %}
+
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+
+          <li>subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
 </footer>

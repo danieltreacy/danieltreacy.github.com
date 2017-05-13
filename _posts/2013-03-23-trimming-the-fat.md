@@ -9,7 +9,7 @@ I switched off **all** push notifications (even email, as it is by far the worst
 
 Here's my home screen now:
 
-![Alt text](/images/homescreen1.png)
+![Alt text](/assets/homescreen1.png)
 
 (The second screen is just folders of Apple apps I can't delete)
 

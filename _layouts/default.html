@@ -1,35 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link href="/stylesheets/v2.css" media="screen" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/scripts/jquery.js"></script>
-    <script type="text/javascript" src="/scripts/jquery.scrollTo-1.4.3.1-min.js"></script>
-    <script type="text/javascript" src="/scripts/page.js"></script>
-    <script type="text/javascript" src="/scripts/pure.min.js"></script>
-    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-    <title>Daniel Treacy -- {{ page.title }}</title>
-    {% include analytics.html %}
-    <script type="text/javascript" src="//use.typekit.net/qew8rkr.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  </head>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
 
   <body>
 
-    <div id="scroller-mask"></div>
+    {% include header.html %}
 
-    <div id="floating-header">
-      <img id="go-to-top" alt="Top" src="/images/top.png"/>
-    </div>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
 
-    <div id="container">
-      {{ content }}
-    </div>
-
-    <footer>
-    &copy; <script>document.write(new Date().getFullYear())</script> Daniel Treacy &nbsp; <a href="/about.html">About</a> &nbsp;
-    <a href="/archive.html">Archive</a> &nbsp;
-    </footer>
+    {% include footer.html %}
 
   </body>
 

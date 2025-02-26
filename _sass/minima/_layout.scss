@@ -175,6 +175,15 @@
  */
 .page-content {
   padding: $spacing-unit 0;
+
+  h2 {
+    @include relative-font-size(1);
+    font-weight: 800;
+
+    @include media-query($on-laptop) {
+      @include relative-font-size(1.75);
+    }
+  }
 }
 
 .page-heading {
@@ -236,5 +245,10 @@
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
+  }
+
+  img {
+    float: left;
+    padding-right: 20px;
   }
 }

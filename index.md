@@ -2,6 +2,6 @@
 layout: home
 ---
 
-Software engineer working in silicon valley.
+Writer and composer of songs and stories. Based in Melbourne, Australia.
 
-Currently building systems to support artificial intelligence at [Kyndi](http://www.kyndi.com)
+Also experienced people leader and software-engineer. Currently solving (and sometimes causing) problems at [Atlassian](http://www.atlassian.com). 

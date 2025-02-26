@@ -15,12 +15,13 @@
 # in the templates via {{ site.myvariable }}.
 title: Daniel Treacy
 email: daniel@danieltreacy.com
-description: >
+description: The next little thing
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: danieltreacy
 github_username:  danieltreacy
+instagram_username: danieltreacy
 
 # Build settings
 markdown: kramdown

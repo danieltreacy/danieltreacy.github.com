@@ -2,6 +2,13 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+@font-face {
+  font-family: "Fineliner";
+  src: url("/assets/fineliner.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 $text: #000;
 $muted: #a6a6a6;
 
@@ -50,9 +57,10 @@ a {
 /* Centre: nav */
 .site-nav {
   ul { list-style: none; margin: 0; padding: 0; }
-  li { margin-bottom: 1.35rem; }
+  li { margin-bottom: 1rem; }
   a {
-    font-size: 1.9rem;
+    font-family: "Fineliner", "Sora", sans-serif;
+    font-size: 2.4rem;
     line-height: 1.4;
     &.active { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
   }
@@ -113,7 +121,7 @@ a {
   .site-nav { margin-top: 0.5rem; }
   .site-nav ul { display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
   .site-nav li { margin-bottom: 0.5rem; }
-  .site-nav a { font-size: 1.3rem; }
+  .site-nav a { font-size: 1.7rem; }
   .recent-list li, .archive li { flex-direction: column; margin-bottom: 0.9rem; }
   .recent-list time, .archive time { flex: none; }
 }

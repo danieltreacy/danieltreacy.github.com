@@ -13,7 +13,8 @@
 
       <aside class="col-bio">
         <a href="{{ "/" | relative_url }}">
-          <img class="portrait" src="{{ "/assets/photo.webp" | relative_url }}" alt="Daniel Treacy">
+          {% assign avatar = page.avatar | default: "photo" %}
+          <img class="portrait" src="{{ "/assets/" | append: avatar | append: ".webp" | relative_url }}" alt="Daniel Treacy">
         </a>
         <p class="name">{{ site.title | escape }}</p>
         <p>Writer and composer of songs and stories. Based in Melbourne, Australia.</p>

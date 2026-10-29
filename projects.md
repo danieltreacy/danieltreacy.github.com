@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+avatar: photo-projects
 permalink: /projects/
 ---
 

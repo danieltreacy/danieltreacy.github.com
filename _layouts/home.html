@@ -2,4 +2,14 @@
 layout: default
 ---
 
-{{ content }}
+<section class="recent">
+  <h2 class="recent-head">Recent posts <a href="{{ "/feed.xml" | relative_url }}">RSS feed</a></h2>
+  <ul class="recent-list">
+    {% for post in site.posts limit: 8 %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time>
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

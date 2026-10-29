@@ -1,5 +1,5 @@
 ---
 layout: posts
-title: Thoughts
+title: Blog
 permalink: /thoughts/
 ---

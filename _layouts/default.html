@@ -4,17 +4,43 @@
   {% include head.html %}
 
   <body>
+    <div class="layout">
 
-    {% include header.html %}
+      <aside class="col col-bio">
+        <a href="{{ "/" | relative_url }}">
+          <img class="portrait" src="{{ "/assets/headshot.png" | relative_url }}" alt="Daniel Treacy">
+        </a>
+        <h1 class="name"><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
+        <p>Writer and composer of songs and stories. Based in Melbourne, Australia.</p>
+        <p>Also an experienced people leader and software engineer, currently solving (and sometimes causing) problems at <a href="https://www.atlassian.com">Atlassian</a>.</p>
+        <ul class="social">
+          {% if site.github_username %}<li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>{% endif %}
+          {% if site.instagram_username %}<li><a href="https://instagram.com/{{ site.instagram_username }}">Instagram</a></li>{% endif %}
+          {% if site.email %}<li><a href="mailto:{{ site.email }}">Email</a></li>{% endif %}
+          <li><a href="{{ "/feed.xml" | relative_url }}">RSS</a></li>
+        </ul>
+      </aside>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+      <main class="col col-main" aria-label="Content">
+        {% include nav.html %}
+        <div class="content">
+          {{ content }}
+        </div>
+      </main>
 
-    {% include footer.html %}
+      <aside class="col col-posts">
+        <h2 class="col-heading">Writing</h2>
+        <ul class="post-list">
+          {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+          </li>
+          {% endfor %}
+        </ul>
+      </aside>
 
+    </div>
   </body>
 
 </html>

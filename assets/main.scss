@@ -9,23 +9,40 @@
   font-display: swap;
 }
 
+@mixin dark-vars {
+  color-scheme: dark;
+  --bg: #131313;
+  --text: #f1f1f1;
+  --muted: #7d7d7d;
+  --quote: #b5b5b5;
+  --rule: #333;
+  --sun: 1;
+  --moon: 0;
+}
+
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --bg: #fff;
   --text: #000;
   --muted: #a6a6a6;
   --quote: #555;
   --rule: #e5e5e5;
+  --sun: 0;
+  --moon: 1;
 }
 
+/* Follow the system unless the visitor has picked a theme */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #131313;
-    --text: #f1f1f1;
-    --muted: #7d7d7d;
-    --quote: #b5b5b5;
-    --rule: #333;
-  }
+  :root:not([data-theme="light"]) { @include dark-vars; }
+}
+:root[data-theme="dark"] { @include dark-vars; }
+
+/* Fade between themes (class is added only while toggling) */
+.theme-fade, .theme-fade * {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, opacity 0.4s ease !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-fade, .theme-fade * { transition: none !important; }
 }
 
 * { box-sizing: border-box; }
@@ -45,6 +62,7 @@ a {
 }
 
 .layout {
+  position: relative;
   display: grid;
   grid-template-columns: 240px 260px minmax(0, 1fr);
   column-gap: 3.5rem;
@@ -83,6 +101,29 @@ a {
     line-height: 1.4;
     &.active { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
   }
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1.75rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  &:hover { color: var(--text); }
+  svg {
+    position: absolute;
+    inset: 0.3rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    transition: opacity 0.4s ease;
+  }
+  .sun { opacity: var(--sun); }
+  .moon { opacity: var(--moon); }
 }
 
 .social {

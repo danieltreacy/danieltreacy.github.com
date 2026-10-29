@@ -25,7 +25,7 @@ instagram_username: danieltreacy
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile

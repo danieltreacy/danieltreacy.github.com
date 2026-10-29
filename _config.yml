@@ -22,7 +22,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: danieltreacy
 github_username:  danieltreacy
 instagram_username: danieltreacy
-substack_url: https://danieltreacy.substack.com
+substack_url: https://substack.com/danieltreacy
+soundcloud_url: https://soundcloud.com/danieltreacy
+bandcamp_url: https://danieltreacy.bandcamp.com/
+discogs_url: https://www.discogs.com/user/dtreacy
 
 # Build settings
 markdown: kramdown

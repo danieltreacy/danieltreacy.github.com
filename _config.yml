@@ -35,3 +35,12 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# Profile photo shown in the left column (file in assets/, no extension).
+# Pages override it with `avatar:` in their front matter.
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      avatar: photo-blog

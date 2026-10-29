@@ -69,6 +69,15 @@ a {
   }
 }
 
+.social {
+  display: flex;
+  gap: 1.1rem;
+  list-style: none;
+  margin: 2.25rem 0 0;
+  padding: 0;
+  a { display: block; line-height: 0; }
+}
+
 /* Right: recent posts, or page content */
 .recent-head {
   margin: 0.3rem 0 1.25rem;
@@ -121,7 +130,8 @@ a {
 @media (max-width: 600px) {
   .layout { grid-template-columns: 1fr; padding: 2rem 1.25rem; }
   .portrait { width: 160px; }
-  .site-nav { margin-top: 0.5rem; }
+  .col-nav { margin-top: 0.5rem; }
+  .social { margin-top: 1rem; }
   .site-nav ul { display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
   .site-nav li { margin-bottom: 0.5rem; }
   .site-nav a { font-size: 1.7rem; }

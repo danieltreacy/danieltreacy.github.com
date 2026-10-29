@@ -4,6 +4,6 @@
     <li><a href="{{ "/projects/" | relative_url }}"{% if page.url == "/projects/" %} class="active"{% endif %}>Projects</a></li>
     <li><a href="{{ "/music/" | relative_url }}"{% if page.url == "/music/" %} class="active"{% endif %}>Music</a></li>
     <li><a href="{{ "/thoughts/" | relative_url }}"{% if page.url == "/thoughts/" or page.layout == "post" %} class="active"{% endif %}>Blog</a></li>
-    <li><a href="{{ "/field-notes/" | relative_url }}"{% if page.url == "/field-notes/" %} class="active"{% endif %}>Field Notes</a></li>
+    <li><a href="{{ site.field_notes_url }}">Field Notes</a></li>
   </ul>
 </nav>

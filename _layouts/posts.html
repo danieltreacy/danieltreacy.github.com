@@ -2,12 +2,11 @@
 layout: page
 ---
 
-<ul class="post-list">
+<ul class="archive">
   {% for post in site.posts %}
     <li>
-      {% assign date_format = "%Y-%m-%d" %}
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
     </li>
   {% endfor %}
 </ul>

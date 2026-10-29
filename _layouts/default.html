@@ -4,17 +4,54 @@
   {% include head.html %}
 
   <body>
+    <div class="layout">
 
-    {% include header.html %}
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+      <aside class="col-bio">
+        <a href="{{ "/" | relative_url }}">
+          <img class="portrait" src="{{ "/assets/photo.webp" | relative_url }}" alt="Daniel Treacy">
+        </a>
+        <p class="name">{{ site.title | escape }}</p>
+        <p>Writer and composer of songs and stories. Based in Melbourne, Australia.</p>
+        <p>Also experienced people leader and software-engineer. Currently solving (and sometimes causing) problems at <a href="https://www.atlassian.com">Atlassian</a>.</p>
+        {% include social.html %}
+      </aside>
+
+      <div class="col-nav">
+        {% include nav.html %}
       </div>
-    </main>
 
-    {% include footer.html %}
+      <main class="col-content" aria-label="Content">
+        {{ content }}
+      </main>
 
+    </div>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var btn = document.querySelector(".theme-toggle");
+        var mq = window.matchMedia("(prefers-color-scheme: dark)");
+        function current() {
+          return root.getAttribute("data-theme") || (mq.matches ? "dark" : "light");
+        }
+        function label() {
+          btn.setAttribute("aria-label", "Switch to " + (current() === "dark" ? "light" : "dark") + " mode");
+        }
+        label();
+        btn.addEventListener("click", function () {
+          var next = current() === "dark" ? "light" : "dark";
+          root.classList.add("theme-fade");
+          root.setAttribute("data-theme", next);
+          try { localStorage.setItem("theme", next); } catch (e) {}
+          label();
+          setTimeout(function () { root.classList.remove("theme-fade"); }, 500);
+        });
+      })();
+    </script>
   </body>
 
 </html>

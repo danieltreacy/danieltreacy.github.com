@@ -11,24 +11,24 @@
 
 @mixin dark-vars {
   color-scheme: dark;
-  --bg: #17130f;
-  --text: #f3ece2;
-  --muted: #8a7d6e;
-  --quote: #c2b6a6;
-  --rule: #3a3128;
-  --accent: #8db4e3;
+  --bg: #0e1319;
+  --text: #e7edf4;
+  --muted: #75818f;
+  --quote: #b3bfcc;
+  --rule: #27303a;
+  --accent: #6cc3cc;
   --sun: 1;
   --moon: 0;
 }
 
 :root {
   color-scheme: light;
-  --bg: #fdf6ee;
-  --text: #1f1a15;
-  --muted: #b0a392;
-  --quote: #6b5f52;
-  --rule: #eadfce;
-  --accent: #3f6c9e;
+  --bg: #f2f5f9;
+  --text: #151a20;
+  --muted: #98a4b3;
+  --quote: #55616f;
+  --rule: #dde4ec;
+  --accent: #1d7a86;
   --sun: 0;
   --moon: 1;
 }

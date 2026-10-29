@@ -131,9 +131,10 @@ a {
   flex-wrap: wrap;
   gap: 1rem 1.1rem;
   list-style: none;
-  margin: 2.25rem 0 0;
+  margin: 0;
   padding: 0;
   a { display: block; line-height: 0; }
+  svg { width: 1.25rem; height: 1.25rem; }
 }
 
 /* Right: recent posts, or page content */
@@ -176,7 +177,7 @@ a {
 
 /* Keep the bio and nav in view while the content scrolls, but only when the
    window is tall enough to show them in full */
-@media (min-height: 700px) {
+@media (min-height: 740px) {
   .col-bio, .col-nav { position: sticky; top: 2rem; align-self: start; }
 }
 
@@ -197,7 +198,6 @@ a {
   .portrait { width: 220px; }
   .site-nav ul { display: flex; flex-wrap: wrap; gap: 0 2rem; }
   .site-nav li { margin-bottom: 0; }
-  .social { margin-top: 1rem; }
   .theme-toggle { right: 1.25rem; }
 }
 
@@ -212,8 +212,7 @@ a {
   .col-bio { position: static; }
   .col-content { margin-top: 1.75rem; }
   .portrait { width: 160px; }
-  .col-nav { margin-top: 0.5rem; }
-  .social { margin-top: 1rem; }
+  .col-nav { margin-top: 1.5rem; }
   .site-nav ul { display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
   .site-nav li { margin-bottom: 0.5rem; }
   .site-nav a { font-size: 1.7rem; }
